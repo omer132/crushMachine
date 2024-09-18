@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="first.css">
+    <title>Document</title>
+</head>
+<body> 
+    <h1 id="baslik">CRUSH???</h1>
+    <div class="btn">
+        <form action="secondPage.html">
+            <div class="evt">
+                <input id="evet" type="submit" value="YES:):)">
+            </div>
+        </form>
+        <div class="hyr">
+            <input id="hayir" type="button" value="no" onclick="moveButton()">
+        </div>
+    </div>
+
+    <script>
+        function moveButton() {
+            const button = document.getElementById('hayir');
+            const x = Math.random() * (window.innerWidth - button.offsetWidth);
+            const y = Math.random() * (window.innerHeight - button.offsetHeight);
+            button.style.position = 'absolute';
+            button.style.left = `${x}px`;
+            button.style.top = `${y}px`;
+        }
+    </script>
+</body>
+</html>

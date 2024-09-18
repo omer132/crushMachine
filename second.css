@@ -1,0 +1,15 @@
+body {
+    background-color: rgb(51, 51, 51);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 80vh; /* Yüksekliği %80 yap */
+    background-image: url(https://i.pinimg.com/originals/b5/b3/d3/b5b3d3333bdb6fc2e4d034e37eea9dfb.jpg);
+    background-position: center;
+    background-size: 80%; /* Resmi %80 oranında küçült */
+    background-repeat: no-repeat; /* Resmin tekrar etmesini engelle */
+}
+
+#oo{
+    color: red;
+}
