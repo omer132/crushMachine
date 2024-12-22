@@ -1,15 +1,52 @@
-body {
-    background-color: rgb(51, 51, 51);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    height: 80vh; /* Yüksekliği %80 yap */
-    background-image: url(https://i.pinimg.com/originals/b5/b3/d3/b5b3d3333bdb6fc2e4d034e37eea9dfb.jpg);
-    background-position: center;
-    background-size: 80%; /* Resmi %80 oranında küçült */
-    background-repeat: no-repeat; /* Resmin tekrar etmesini engelle */
+@keyframes waveColor {
+    0% { color: red; }
+    14% { color: orange; }
+    28% { color: yellow; }
+    42% { color: green; }
+    57% { color: blue; }
+    71% { color: indigo; }
+    85% { color: violet; }
+    100% { color: red; }
 }
 
-#oo{
+body, html {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: column; 
+    justify-content: flex-start; 
+    align-items: center;
+    overflow: hidden; 
+}
+
+.video-background {
+    position: fixed; 
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+    z-index: -1;
+}
+
+#oo, #kacav { 
     color: red;
+    text-align: center;
+    margin-top: 20px;
+    z-index: 1; 
+    animation: waveColor 3s infinite; 
+}
+
+#car {
+    position: absolute; 
+    top: 50%; 
+    left: 50%;
+    transform: translate(-80%, -50%);
+    z-index: 1; 
+}
+
+#car img {
+    width: 160%; 
+    height: auto; 
+    max-width: none; 
 }
