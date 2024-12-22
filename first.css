@@ -1,17 +1,28 @@
-body{
+@keyframes waveColor {
+    0% { color: red; }
+    14% { color: orange; }
+    28% { color: yellow; }
+    42% { color: green; }
+    57% { color: blue; }
+    71% { color: indigo; }
+    85% { color: violet; }
+    100% { color: red; }
+}
+
+body {
     background-color: rgb(51, 51, 51);
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
-    height: 90vh; /* Yüksekliği %80 yap */
+    height: 90vh;
     background-image: url(https://newsroom.porsche.com/.imaging/mte/porsche-templating-theme/image_1290x726/dam/pnr/2023/Company/Sally-und-Lightning-McQueen-Rennsport-7/Cartoon_Pixar_Sally_LightningMcQueen.jpg/jcr:content/Cartoon_Pixar_Sally_LightningMcQueen.jpg);
     background-position: center;
-    background-size: 60%; /* Resmi %80 oranında küçült */
-    background-repeat: no-repeat; /* Resmin tekrar etmesini engelle */
+    background-size: 60%;
+    background-repeat: no-repeat;
 }
 
-.btn{
+.btn {
     display: flex;
     gap: 100px;
     margin-top: 250px;
@@ -20,24 +31,25 @@ body{
 #evet, #hayir {
     color: ghostwhite;
     background-color: #990F02;
-    padding: 8px 36px;
-    border-radius: 20px;
-    width: 110px; /* Genişliği %5 yerine piksel cinsinden ayarlayın */
+    padding: 8px 20px;
+    border-radius: 30px;
+    width: 110px;
     cursor: pointer;
-    border: 2px solid red; /* Border'ı düzgün hale getirin */
-    text-align: center; /* Metni ortala */
-    display: flex; /* Flex kullanarak içeriği ortala */
-    justify-content: center; /* Yatay ortalama */
-    align-items: center; /* Dikey ortalama */
+    border: 2px solid red;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     transition: all 0.5s ease;
 }
 
-#evet{
+#evet {
     position: absolute;
     left: 600px;
     top: 640px;
 }
 
-#baslik{
+#baslik {
     color: red;
+    animation: waveColor 3s infinite; 
 }
